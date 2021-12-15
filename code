@@ -1,0 +1,9 @@
+n=list(map(int,input().split(" ")))
+for i in range(len(n)-1):
+    minindex=i
+    for j in range(i+1,len(n)):
+        if n[j]<n[minindex]:
+            minindex=j
+    if minindex!=i:
+        n[i],n[minindex]=n[minindex],n[i]
+print(n)
